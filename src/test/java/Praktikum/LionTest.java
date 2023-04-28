@@ -48,7 +48,7 @@ public class LionTest {
         List<String> actual = lion.getFood();
         Assert.assertEquals(expected, actual);
     }
-    @Test
+    @Test(expected = NullPointerException.class)
     public void checkUnknownSexLionHasManeError() {
         try {
             new Lion("Unknown", feline);
